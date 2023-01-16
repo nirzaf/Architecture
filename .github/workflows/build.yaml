@@ -1,0 +1,43 @@
+name: build
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: DotNet Setup
+        uses: actions/setup-dotnet@v3
+        with:
+          global-json-file: source/global.json
+
+      - name: DotNet Publish
+        run: dotnet publish source/Web --configuration Release --output web
+
+      - name: Node Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          check-latest: true
+
+      - name: Angular Publish
+        run: |
+          cd source/Web/Frontend
+          npm run restore
+          npm run publish
+
+      - name: Prepare Artifact
+        run: |
+          rm --force --recursive web/*.pdb
+          rm --force --recursive web/Frontend/*
+          mv --force source/Web/Frontend/dist/* web/Frontend
+          cat <<< "$(jq '.api="https://www.google.com"' web/Frontend/assets/settings.json)" > web/Frontend/assets/settings.json
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: web
+          path: web

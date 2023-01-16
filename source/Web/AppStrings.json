@@ -1,0 +1,14 @@
+{
+    "AuthError": {
+        "en": "Invalid login and password!",
+        "pt": "Login e senha inválidos!"
+    },
+    "EmailExists": {
+        "en": "Email exists!",
+        "pt": "Email existente!"
+    },
+    "LoginExists": {
+        "en": "Login exists!",
+        "pt": "Login existente!"
+    }
+}

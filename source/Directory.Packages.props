@@ -1,0 +1,39 @@
+<Project>
+  <PropertyGroup>
+    <EnablePackageVersionOverride>false</EnablePackageVersionOverride>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="DotNetCore.AspNetCore" Version="17.11.0" />
+    <PackageVersion Include="DotNetCore.Domain" Version="17.10.0" />
+    <PackageVersion Include="DotNetCore.EntityFrameworkCore" Version="17.11.0" />
+    <PackageVersion Include="DotNetCore.Extensions" Version="17.4.0" />
+    <PackageVersion Include="DotNetCore.IoC" Version="17.5.0" />
+    <PackageVersion Include="DotNetCore.Logging" Version="17.11.0" />
+    <PackageVersion Include="DotNetCore.Mediator" Version="17.10.0" />
+    <PackageVersion Include="DotNetCore.Objects" Version="17.11.0" />
+    <PackageVersion Include="DotNetCore.Repositories" Version="17.5.0" />
+    <PackageVersion Include="DotNetCore.Results" Version="17.4.0" />
+    <PackageVersion Include="DotNetCore.Security" Version="17.10.0" />
+    <PackageVersion Include="DotNetCore.Services" Version="17.11.0" />
+    <PackageVersion Include="DotNetCore.Validation" Version="17.4.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2" />
+    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="7.0.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageVersion Include="xunit" Version="2.4.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Update="DotNetCore.Domain" Version="17.11.0" />
+    <PackageVersion Update="DotNetCore.Domain" Version="17.11.0" />
+    <PackageVersion Update="DotNetCore.Mediator" Version="17.11.0" />
+    <PackageVersion Update="DotNetCore.Mediator" Version="17.11.0" />
+    <PackageVersion Update="DotNetCore.Security" Version="17.11.0" />
+    <PackageVersion Update="DotNetCore.Security" Version="17.11.0" />
+    <PackageVersion Update="Microsoft.Extensions.Localization.Abstractions" Version="7.0.2" />
+    <PackageVersion Update="Microsoft.Extensions.Localization.Abstractions" Version="7.0.2" />
+  </ItemGroup>
+</Project>
